@@ -13,4 +13,4 @@ stop:
 	docker compose -f docker-compose.yml down
 
 download_model:
-	curl -o ./models/gemma-2b-it-q4_k_m.gguf https://aiservices-bucket.s3.amazonaws.com/ai_model/GGUF/gemmals-2b-it-q4_k_m.gguf
+	curl -o ./models/gemma-2b-it-q4_k_m.gguf https://aiservices-bucket.s3.amazonaws.com/ai_model/GGUF/gemma-2b-it-q4_k_m.gguf
