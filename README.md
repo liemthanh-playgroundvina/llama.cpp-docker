@@ -1,10 +1,11 @@
 # Llama.cpp Dockerize for ARM64
 
-- Check your cpu type
+- Check your cpu type & config environment
 
 ```# command
 $ lscpu
 # find 'avx' in Flags
+$ nano config.env
 ```
 
 
