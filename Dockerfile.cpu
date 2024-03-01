@@ -1,4 +1,6 @@
-FROM ubuntu:20.04 AS build
+ARG BASE_IMAGE=arm64v8/ubuntu:20.04
+
+FROM ${BASE_IMAGE} AS build
 
 RUN apt-get update -y && DEBIAN_FRONTEND=noninteractive \
     apt-get install -y --no-install-recommends ca-certificates git build-essential \
@@ -12,7 +14,7 @@ WORKDIR /llama.cpp
 
 RUN make
 
-FROM ubuntu:20.04 AS runtime
+FROM ${BASE_IMAGE} AS runtime
 
 WORKDIR /app
 

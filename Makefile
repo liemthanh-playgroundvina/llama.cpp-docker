@@ -1,9 +1,15 @@
-# Build and start
+all: build
+include config.env
+export $(shell sed 's/=.*//' config.env)
+
 build-cpu:
-	docker build -t open-llm-cpp:cpu -f Dockerfile.cpu .
+	docker build --build-arg BASE_IMAGE=$(BASE_IMAGE)-t open-llm-cpp:cpu -f Dockerfile.cpu .
 
 pull-cpu:
 	docker pull liemthanh/open-llm-cpp:cpu
+
+pull-cpu-AVX:
+	docker pull liemthanh/open-llm-cpp:cpu-AVX
 
 start:
 	docker compose -f docker-compose.yml down
