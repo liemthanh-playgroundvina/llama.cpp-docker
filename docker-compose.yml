@@ -1,0 +1,21 @@
+# docker-compose -f docker-compose.yml build/up -d/down
+
+version: '3.7'
+
+services:
+  open-llm:
+    image: liemthanh/open-llm-cpp:cpu
+    container_name: open-llm-cpp-app
+    command:
+      ["./server", "--model", "./models/gemma-2b-it-q4_k_m.gguf", "--ctx-size", "512", "--n-gpu-layers", "-1", "--host", "0.0.0.0", "--port", "8900"]
+    volumes:
+      - ./models:/app/models
+    ports:
+      - "8900:8900"
+    networks:
+      - server-net
+
+networks:
+  server-net:
+    name: server-net
+    driver: bridge
