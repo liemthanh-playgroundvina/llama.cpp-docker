@@ -13,7 +13,10 @@ $ nano config.env
 - Step 1: Build/Pull Image
 
 ```
-make build-cpu/pull-cpu
+# build
+make build-cpu
+# or pull
+make pull-cpu # if have avx using 'pull-cpu-AVX'
 ```
 
 - Step 2: Download Model (Gemma-2B Quantize 4bit)
