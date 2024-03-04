@@ -17,10 +17,10 @@ stop:
 	docker compose -f docker-compose.yml down
 
 # pm2
-pm2-build-cpu:
+build-cpu-local:
 	./setup.sh
 
-pm2-sudo-build-cpu:
+build-cpu-local-sudo:
 	sudo ./setup.sh
 
 pm2-start:
