@@ -62,3 +62,27 @@ $ make download_model
 ```
 $ make pm2-start
 ```
+
+
+
+## Services
+```
+http://localhost:8900/
+
+# curl
+curl --location 'http://0.0.0.0:8900/v1/chat/completions' \
+--header 'Content-Type: application/json' \
+--header 'Authorization: Bearer' \
+--data '{
+    "model": "gemma-2b-it-q4_k_m.gguf",
+    "stream": false,
+    "stop": ["<end_of_turn>"],
+    "temperature": 0.8,
+    "n": 1,
+    "messages": [
+	{"role": "system", "content": "You are a helpful assistant."},
+	{"role": "user", "content": "Hello!"},
+	...
+	]
+  }'
+```
