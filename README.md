@@ -52,4 +52,5 @@ make download_model
 - Step 3: Start Server
 
 ```
-./llama.cpp/server --model ./models/gemma-2b-it-q4_k_m.gguf --ctx-size 512 --n-gpu-layers -1 --host 0.0.0.0 --port 8900```
+./llama.cpp/server --model ./models/gemma-2b-it-q4_k_m.gguf --ctx-size 512 --n-gpu-layers -1 --host 0.0.0.0 --port 8900
+```
