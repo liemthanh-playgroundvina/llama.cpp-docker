@@ -12,10 +12,15 @@ $ nano config.env
 - Step 2: Build/Pull Image
 
 ```
+# clone
+$ git clone https://github.com/liemthanh-playgroundvina/llama.cpp-docker
+$ cd llama.cpp-docker
+
 # build
 $ make build-cpu
+
 # or pull
-$ make pull-cpu # if have avx using 'pull-cpu-AVX'
+$ make pull-cpu
 ```
 
 - Step 3: Download Model (Gemma-2B Quantize 4bit)
@@ -38,11 +43,11 @@ $ make start
 # setup
 $ termux-setup-storage (Choose github storage)
 $ apt update -y && apt upgrade -y
-$ apt install -y clang ndk-multilib git make curl nodejs-lts
-$ npm install pm2 -g
+$ apt install -y git make curl 
 
 # build
 $ git clone https://github.com/liemthanh-playgroundvina/llama.cpp-docker
+$ cd llama.cpp-docker
 $ make build-cpu-local
 ```
 
