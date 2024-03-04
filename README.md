@@ -43,6 +43,7 @@ $ apt install -y clang ndk-multilib git make curl nodejs-lts
 $ npm install pm2 -g
 
 # build
+$ git clone https://github.com/liemthanh-playgroundvina/llama.cpp-docker
 $ make build-cpu-local
 ```
 
