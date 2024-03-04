@@ -33,11 +33,16 @@ $ make start
 
 ## Option 2: Termux
 
-- Step 1: Set up
+- Step 1: Set up & build
 
 ```
-$ termux-setup-storage (Choose github storage)
 # setup
+$ termux-setup-storage (Choose github storage)
+$ apt update -y && apt upgrade -y
+$ apt install -y clang ndk-multilib git make curl nodejs-lts
+$ npm install pm2 -g
+
+# build
 $ make build-cpu-local
 ```
 
