@@ -18,10 +18,7 @@ stop:
 
 # pm2
 build-cpu-local:
-	./setup.sh
-
-build-cpu-local-sudo:
-	sudo ./setup.sh
+	chmod +x setup.sh && ./setup.sh
 
 pm2-start:
 	pm2 start start.sh --name "open-llm-cpp-app"
